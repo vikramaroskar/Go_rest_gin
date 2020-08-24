@@ -6,10 +6,21 @@ import (
 	"github.com/gin-gonic/gin"
 	
 	"example.com/user/ginpoc/src/handler"
+	"example.com/user/ginpoc/src/platform/newsfeed"
 )
 
 func main() {
 	fmt.Println("Starting main in Gin POC")
+	
+	
+	feed := newsfeed.New()
+	
+	fmt.Println(feed)
+	
+	feed.Add(newsfeed.Newsitem{"Firstpost", "This is body of first post"})
+	feed.Add(newsfeed.Newsitem{"Secondpost", "This is body of second post"})
+	
+	fmt.Println(feed)
 	
 	r := gin.Default()
 	
