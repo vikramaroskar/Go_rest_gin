@@ -3,6 +3,8 @@ go rest api with gin library
 
 # Reference youtube video
 ## https://www.youtube.com/watch?v=SpNsRVSW90U
+## https://www.youtube.com/watch?v=LOn1GUsjOF4
+
 
 # Gin reference
 ## https://github.com/gin-gonic/gin

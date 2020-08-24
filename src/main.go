@@ -14,17 +14,22 @@ func main() {
 	
 	
 	feed := newsfeed.New()
-	
+	/*
 	fmt.Println(feed)
 	
 	feed.Add(newsfeed.Newsitem{"Firstpost", "This is body of first post"})
 	feed.Add(newsfeed.Newsitem{"Secondpost", "This is body of second post"})
 	
 	fmt.Println(feed)
+	*/
 	
 	r := gin.Default()
 	
 	r.GET("/ping", handler.PingGet())
+	r.GET("/newsfeed", handler.NewsfeedGet(feed))
+	
+	r.POST("/newsfeed", handler.NewsfeedPost(feed))
+	
 	
 	
 	

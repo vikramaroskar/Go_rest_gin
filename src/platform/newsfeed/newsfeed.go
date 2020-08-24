@@ -12,7 +12,9 @@ type Newsfeed struct {
 }
 
 func New() *Newsfeed {
-	return &Newsfeed{}
+	return &Newsfeed{
+		Feeditems: []Newsitem{},
+	}
 }
 
 func (nf *Newsfeed) Add(item Newsitem) {
