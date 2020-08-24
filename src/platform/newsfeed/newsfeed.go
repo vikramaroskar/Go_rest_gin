@@ -1,5 +1,17 @@
 package newsfeed
 
+//interface
+
+type Getter interface {
+	GetAll() []Newsitem
+}
+
+type Adder interface {
+	Add(item Newsitem)
+}
+
+
+
 type Newsitem struct {
 
 	Title string `json:"title"`
@@ -12,7 +24,7 @@ type Newsfeed struct {
 }
 
 func New() *Newsfeed {
-	return &Newsfeed{
+	return &Newsfeed {
 		Feeditems: []Newsitem{},
 	}
 }

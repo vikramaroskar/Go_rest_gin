@@ -15,7 +15,7 @@ type newsfeedPostRequest struct {
 
 }
 
-func NewsfeedPost(feed *newsfeed.Newsfeed) gin.HandlerFunc {
+func NewsfeedPost(feed newsfeed.Adder /* *newsfeed.Newsfeed */) gin.HandlerFunc {
 	return func(c *gin.Context){
 	
 		requestBody := newsfeedPostRequest{}

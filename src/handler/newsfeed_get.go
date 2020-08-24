@@ -9,7 +9,7 @@ import (
 	"example.com/user/ginpoc/src/platform/newsfeed"
 )
 
-func NewsfeedGet(feed *newsfeed.Newsfeed) gin.HandlerFunc {
+func NewsfeedGet(feed  newsfeed.Getter /* *newsfeed.Newsfeed */) gin.HandlerFunc {
 	return func(c *gin.Context){
 		results := feed.GetAll()
 	
